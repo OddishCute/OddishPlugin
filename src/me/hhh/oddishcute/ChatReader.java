@@ -1,9 +1,13 @@
 package me.hhh.oddishcute;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+
+import java.util.Locale;
 
 public class ChatReader implements Listener
 {
@@ -13,9 +17,23 @@ public class ChatReader implements Listener
 
     Player player = event.getPlayer();
 
-    if(message.contains("aha"))
+    Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable()
     {
-      player.sendMessage("Jetzt wird deine ganze Familie umgebracht hahahaha");
-    }
+      @Override
+      public void run()
+      {
+        if(message.toLowerCase().contains("aha"))
+        {
+          if(message.toLowerCase().contains("und jetzt?"))
+          {
+            player.sendMessage(ChatColor.RED+"...wird deine ganze Familie umgebracht hahahaha");
+          }
+          else{
+            player.sendMessage(ChatColor.RED+"Jetzt wird deine ganze Familie umgebracht hahahaha");
+          }
+        }
+      }
+    }, 10L);
+
   }
 }
