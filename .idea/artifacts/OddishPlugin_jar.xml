@@ -5,6 +5,9 @@
       <element id="module-output" name="OddishPlugin" />
       <element id="extracted-dir" path="$USER_HOME$/Spigot 1.8.9 Server/spigot-1.16.5.jar" path-in-jar="/" />
       <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/ChatReader.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/CommandOddish.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/Main.java" />
     </root>
   </artifact>
 </component>

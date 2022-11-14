@@ -10,6 +10,7 @@ public class Main extends JavaPlugin
   public void onEnable(){
     getLogger().info(ChatColor.GREEN + "Enabled" + this.getName());
     this.getCommand("oddish").setExecutor(new CommandOddish());
+    getServer().getPluginManager().registerEvents(new ChatReader(), this);
   }
 
   @Override
