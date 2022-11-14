@@ -45,6 +45,10 @@ public class ChatReader implements Listener
         {
           player.sendMessage(ChatColor.DARK_PURPLE + "Schöner als du allemal du Hackfresse");
         }
+        else if(message.toLowerCase().contains("und jetzt"))
+        {
+          player.sendMessage(ChatColor.RED+"...wird deine ganze Familie umgebracht "+player.getName()+", hahahaha");
+        }
       }
     }, 10L);
 
