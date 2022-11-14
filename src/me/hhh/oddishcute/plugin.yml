@@ -1,0 +1,11 @@
+name: oddishcute # the plugins name as it should appear in the plugin list /pl
+version: 1.0 # the plugin's version
+author: BigManTripleH
+main: me.hhh.oddishcute.Main
+api-version: 1.16 # the version of the API you want to use, required starting with 1.13
+
+commands:
+  oddish:
+    description: Gives you oddish
+    usage: /oddish
+    permission: oddish.cute
