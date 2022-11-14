@@ -31,17 +31,17 @@ public class ChatReader implements Listener
         {
           if(message.toLowerCase().contains("und jetzt"))
           {
-            player.sendMessage(ChatColor.RED+"...wird deine ganze Familie umgebracht"+player.getName()+", hahahaha");
+            player.sendMessage(ChatColor.RED+"...wird deine ganze Familie umgebracht "+player.getName()+", hahahaha");
           }
           else{
-            player.sendMessage(ChatColor.RED+"Jetzt wird deine ganze Familie umgebracht"+player.getName()+", hahahaha");
+            player.sendMessage(ChatColor.RED+"Jetzt wird deine ganze Familie umgebracht "+player.getName()+", hahahaha");
           }
         }
         else if(message.toLowerCase().contains("junge"))
         {
           player.sendMessage(ChatColor.DARK_PURPLE + "seethe and cope");
         }
-        else if(message.toLowerCase().contains("schön für dich" +player.getName()))
+        else if(message.toLowerCase().contains("schön für dich " +player.getName()))
         {
           player.sendMessage(ChatColor.DARK_PURPLE + "Schöner als du allemal du Hackfresse");
         }
