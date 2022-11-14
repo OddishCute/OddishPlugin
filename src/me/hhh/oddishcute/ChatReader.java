@@ -24,13 +24,17 @@ public class ChatReader implements Listener
       {
         if(message.toLowerCase().contains("aha"))
         {
-          if(message.toLowerCase().contains("und jetzt?"))
+          if(message.toLowerCase().contains("und jetzt"))
           {
             player.sendMessage(ChatColor.RED+"...wird deine ganze Familie umgebracht hahahaha");
           }
           else{
             player.sendMessage(ChatColor.RED+"Jetzt wird deine ganze Familie umgebracht hahahaha");
           }
+        }
+        else if(message.toLowerCase().contains("junge"))
+        {
+          player.sendMessage(ChatColor.DARK_PURPLE + "seethe and cope");
         }
       }
     }, 10L);
