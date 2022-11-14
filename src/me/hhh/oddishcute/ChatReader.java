@@ -17,11 +17,14 @@ public class ChatReader implements Listener
 
     Player player = event.getPlayer();
 
-    if(player.getName().equals("uwu_Meowth"))
+    if(message.toLowerCase().contains("aha") && !message.toLowerCase().contains("hah"))
     {
-      event.setCancelled(true);
-      player.sendMessage(ChatColor.RED+"Schnauze du Versager");
-      return;
+      if(player.getName().equals("uwu_Meowth"))
+      {
+        event.setCancelled(true);
+        player.sendMessage(ChatColor.RED+"Schnauze du Versager");
+        return;
+      }
     }
 
     /*if(player.getName().equals("LowerCaseH"))
