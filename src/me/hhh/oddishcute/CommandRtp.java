@@ -18,6 +18,7 @@ public class CommandRtp implements CommandExecutor
   @Override
   public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
   {
+    int count = 0;
     World world = Bukkit.getServer().getWorld("world");
     int x = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
     int z = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
@@ -35,6 +36,7 @@ public class CommandRtp implements CommandExecutor
       y = world.getHighestBlockYAt(x, z)+1;
       watercheck = new Location(Bukkit.getServer().getWorld("world"), x, y-1, z);
       b = world.getBlockAt(watercheck);
+      count++;
     }
 
     teleport = new Location(Bukkit.getServer().getWorld("world"), x, y, z);
@@ -46,7 +48,8 @@ public class CommandRtp implements CommandExecutor
     {
       if (Bukkit.getOnlinePlayers().contains(Bukkit.getPlayerExact("LowerCaseH")))
       {
-        Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.GREEN + player.getName() + " has randomly teleported to X: " + x + " Y: " + y + " Z: " + z);
+        Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.GREEN + player.getName() + " has randomly teleported to X: " + x + " Y: " + y + " Z: " + z+"\n");
+        Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.AQUA+ " This many locations were above liquids: "+count);
       }
     }
     Bukkit.getLogger().info(ChatColor.GREEN + player.getName()+" has randomly teleported to X: "+x+" Y: "+y+" Z: "+z);
