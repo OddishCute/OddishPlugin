@@ -45,7 +45,7 @@ public class CommandRtp implements CommandExecutor
     player.sendMessage("Teleported you to X: "+x+" Y: "+y+" Z: "+z);
     if(commandSender.getName().equals("LowerCaseH"))
     {
-      commandSender.sendMessage(ChatColor.AQUA+ " This many locations were above liquids: "+count);
+      commandSender.sendMessage(ChatColor.AQUA+ "This many locations were above liquids: "+count);
     }
 
     if(!commandSender.getName().equals("LowerCaseH"))
