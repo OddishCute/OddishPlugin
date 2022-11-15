@@ -1,6 +1,7 @@
 package me.hhh.oddishcute;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.Command;
@@ -27,6 +28,7 @@ public class CommandRtp implements CommandExecutor
     Player player = (Player) commandSender;
     player.teleport(teleport);
     player.sendMessage("Teleported you to"+teleport.toString());
+    Bukkit.getLogger().info(ChatColor.GREEN + player.getName()+" has randomly teleported to X: "+x+" Y: "+y+" Z: "+z);
     return true;
   }
 }
