@@ -14,6 +14,7 @@ public class Main extends JavaPlugin
     getLogger().info(ChatColor.GREEN + "Enabled" + this.getName());
     instance = this;
     this.getCommand("oddish").setExecutor(new CommandOddish());
+    this.getCommand("rtp").setExecutor(new CommandRtp());
     getServer().getPluginManager().registerEvents(new ChatReader(), this);
     getServer().getPluginManager().registerEvents(new SleepListener(), this);
   }

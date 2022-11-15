@@ -12,7 +12,6 @@ public class SleepListener implements Listener
   public void onPlayerSleep(PlayerBedEnterEvent event)
   {
     Player player = event.getPlayer();
-
     player.sendMessage(ChatColor.AQUA + "Nachti Nacht :)");
   }
 }

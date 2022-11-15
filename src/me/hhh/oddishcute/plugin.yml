@@ -9,3 +9,8 @@ commands:
     description: Gives you oddish
     usage: /oddish
     permission: oddish.cute
+
+  rtp:
+    description: Randomly teleports you
+    usage: /rtp
+    permission: oddish.rtp
