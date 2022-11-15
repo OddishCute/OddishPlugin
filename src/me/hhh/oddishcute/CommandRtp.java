@@ -48,7 +48,7 @@ public class CommandRtp implements CommandExecutor
     {
       if (Bukkit.getOnlinePlayers().contains(Bukkit.getPlayerExact("LowerCaseH")))
       {
-        Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.GREEN + player.getName() + " has randomly teleported to X: " + x + " Y: " + y + " Z: " + z+"\n");
+        Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.GREEN + player.getName() + " has randomly teleported to X: " + x + " Y: " + y + " Z: " + z);
         Bukkit.getPlayer("LowerCaseH").sendMessage(ChatColor.AQUA+ " This many locations were above liquids: "+count);
       }
     }
