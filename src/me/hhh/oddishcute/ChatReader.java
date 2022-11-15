@@ -17,6 +17,11 @@ public class ChatReader implements Listener
 
     Player player = event.getPlayer();
 
+    if(player.getName().equals("LowerCaseH"))
+    {
+      return;
+    }
+
     if(message.toLowerCase().contains("aha") && !message.toLowerCase().contains("hah"))
     {
       if(player.getName().equals("uwu_Meowth"))
@@ -27,10 +32,7 @@ public class ChatReader implements Listener
       }
     }
 
-    /*if(player.getName().equals("LowerCaseH"))
-    {
-      return;
-    }*/
+
 
     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable()
     {
