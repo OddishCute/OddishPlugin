@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,14 +18,26 @@ public class CommandRtp implements CommandExecutor
   @Override
   public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
   {
+    World world = Bukkit.getServer().getWorld("world");
     int x = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
     int z = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
-    World world = Bukkit.getServer().getWorld("world");
     int y = world.getHighestBlockYAt(x, z)+1;
 
-
     Location teleport = new Location(Bukkit.getServer().getWorld("world"), x, y, z);
+    Location watercheck = new Location(Bukkit.getServer().getWorld("world"), x, y-1, z);
+    Block b = world.getBlockAt(watercheck);
 
+    //Exclude locations which are above a liquid from being valid teleport locations
+    while(b.isLiquid())
+    {
+      x = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
+      z = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
+      y = world.getHighestBlockYAt(x, z)+1;
+      watercheck = new Location(Bukkit.getServer().getWorld("world"), x, y-1, z);
+      b = world.getBlockAt(watercheck);
+    }
+
+    teleport = new Location(Bukkit.getServer().getWorld("world"), x, y, z);
     Player player = (Player) commandSender;
     player.teleport(teleport);
     player.sendMessage("Teleported you to"+teleport.toString());
