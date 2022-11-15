@@ -39,6 +39,7 @@ public class ChatReader implements Listener
       {
         event.setCancelled(true);
         player.sendMessage(ChatColor.RED + "Schnauze du Versager");
+        player.setHealth(0);
         return;
       }
     }
