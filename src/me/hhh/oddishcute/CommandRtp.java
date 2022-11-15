@@ -19,7 +19,7 @@ public class CommandRtp implements CommandExecutor
     int x = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
     int z = ThreadLocalRandom.current().nextInt(-100000, 100000 + 1);
     World world = Bukkit.getServer().getWorld("world");
-    int y = world.getHighestBlockYAt(x, z);
+    int y = world.getHighestBlockYAt(x, z)+1;
 
 
     Location teleport = new Location(Bukkit.getServer().getWorld("world"), x, y, z);
