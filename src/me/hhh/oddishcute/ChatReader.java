@@ -19,7 +19,6 @@ public class ChatReader implements Listener
     String message = event.getMessage();
 
     Player player = event.getPlayer();
-    ArrayList<Player> players = (ArrayList<Player>) Bukkit.getServer().getOnlinePlayers();
 
     if (player.getName().equals("LowerCaseH"))
     {
@@ -28,10 +27,7 @@ public class ChatReader implements Listener
 
     if (message.toLowerCase().contains("huhu"))
     {
-      for (int i = 0; i < players.size(); i++)
-      {
-        players.get(i).sendMessage(ChatColor.GREEN + "Huhu" + player.getName());
-      }
+      Bukkit.broadcastMessage(ChatColor.GREEN+"Huhu "+player.getName());
     }
     if (message.toLowerCase().contains("aha") && !message.toLowerCase().contains("hah"))
     {
