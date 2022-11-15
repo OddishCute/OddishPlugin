@@ -23,6 +23,7 @@ public class CommandRtp implements CommandExecutor
 
     Player player = (Player) commandSender;
     player.teleport(teleport);
+    player.sendMessage("Teleported you to"+teleport.toString());
     return true;
   }
 }
