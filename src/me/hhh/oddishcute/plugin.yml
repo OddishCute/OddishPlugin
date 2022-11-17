@@ -14,3 +14,8 @@ commands:
     description: Randomly teleports you
     usage: /rtp
     permission: oddish.rtp
+
+  oddishchat:
+    description: Sends a player an Oddish
+    usage: /oddishchat
+    permission: oddish.oddishchat

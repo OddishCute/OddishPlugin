@@ -10,6 +10,7 @@
       <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/Main.java" />
       <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/SleepListener.java" />
       <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/CommandRtp.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/me/hhh/oddishcute/CommandOddishChat.java" />
     </root>
   </artifact>
 </component>

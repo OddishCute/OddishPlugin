@@ -15,6 +15,7 @@ public class Main extends JavaPlugin
     instance = this;
     this.getCommand("oddish").setExecutor(new CommandOddish());
     this.getCommand("rtp").setExecutor(new CommandRtp());
+    this.getCommand("oddishchat").setExecutor(new CommandOddishChat());
     getServer().getPluginManager().registerEvents(new ChatReader(), this);
     getServer().getPluginManager().registerEvents(new SleepListener(), this);
   }
