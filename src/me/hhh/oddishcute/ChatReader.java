@@ -26,16 +26,6 @@ public class ChatReader implements Listener
     {
       Bukkit.broadcastMessage(ChatColor.GREEN+"Huhu "+player.getName());
     }
-    if (message.toLowerCase().contains("aha") && !message.toLowerCase().contains("hah"))
-    {
-      if (player.getName().equals("uwu_Meowth"))
-      {
-        event.setCancelled(true);
-        player.sendMessage(ChatColor.RED + "Schnauze du Versager");
-        player.setHealth(0);
-        return;
-      }
-    }
 
     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable()
     {
